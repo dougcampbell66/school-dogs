@@ -71,6 +71,7 @@ export default function Home() {
                     }, 2000)
                 }
             }
+            //Transcript fix
              } catch (err: unknown) {
             if (err && typeof err === 'object' && 'message' in err && typeof err.message === 'string' &&
                 err.message.includes('Invalid login credentials')) {
