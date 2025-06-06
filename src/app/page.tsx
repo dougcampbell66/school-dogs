@@ -72,7 +72,8 @@ export default function Home() {
                 }
             }
             } catch (err: any) {
-            if (err.message?.includes('Invalid login credentials')) {
+            if (err && typeof err === 'object' && 'message' in err && typeof err.message === 'string' &&
+                err.message.includes('Invalid login credentials')) {
                 // User doesn't exist, proceed with signup
                 try {
                     const { error: authError } = await supabase.auth.signUp({
