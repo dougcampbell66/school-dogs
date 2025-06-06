@@ -71,7 +71,7 @@ export default function Home() {
                     }, 2000)
                 }
             }
-        } catch (err: unknown) {
+            } catch (err: any) {
             if (err.message?.includes('Invalid login credentials')) {
                 // User doesn't exist, proceed with signup
                 try {
