@@ -37,7 +37,7 @@ export default function Login() {
                     window.location.href = '/dashboard'
                 }
             }
-        } catch {
+        } catch (error: unknown) {
             setMessage('Something went wrong. Please try again.')
         }
 
